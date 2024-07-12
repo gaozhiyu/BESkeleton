@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo " test value: ${params.'test'}"
             }
         }
         stage ('Invoke_pipeline') {
