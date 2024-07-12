@@ -7,6 +7,11 @@ pipeline {
                 echo 'Building..'
             }
         }
+        stage ('Invoke_pipeline') {
+            steps {
+                build job: 'firstpipeline'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
